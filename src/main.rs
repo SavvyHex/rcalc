@@ -17,7 +17,18 @@ fn main() {
         "*" => a*b,
         "/" => a/b,
         "%" => a%b,
-        _ => panic!("Please enter a valid operation (+, -, *, /, %)")
+        "p" => {
+            pow(a as u32, b as u32) as f32
+        }
+        _ => panic!("Please enter a valid operation (+, -, *, /, %, p)")
     };
     print!("Your answer is {ans}")
+}
+
+fn pow(b:u32, e:u32) -> u32 {
+    let mut ans:u32 = b;
+    for _ in 0..e-1 {
+        ans = ans * b;
+    }
+    ans
 }
