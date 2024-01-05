@@ -22,7 +22,7 @@ fn main() {
         }
         _ => panic!("Please enter a valid operation (+, -, *, /, %, p)")
     };
-    print!("Your answer is {ans}")
+    println!("Your answer is {ans}")
 }
 
 fn pow(b:u32, e:u32) -> u32 {
